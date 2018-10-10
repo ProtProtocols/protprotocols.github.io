@@ -6,7 +6,7 @@ header:
   overlay_filter: "0.5"
   overlay_image: /assets/images/markus-spiske-507983-unsplash.jpg
   actions:
-    - label: "Get docker-launcher"
+    - label: "<i class='fa fa-download'></i> Get docker-launcher"
       url: "https://github.com/ProtProtocols/docker-launcher"
   caption: "Photo by [Markus Spiske](https://unsplash.com/photos/466ENaLuhLY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/science?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)"
 excerpt: "Easy-to-use, reproducible bioinformatics workflows for MS/MS based proteomics approaches."
@@ -18,7 +18,7 @@ docker_launcher:
     title: "docker-launcher"
     excerpt: "The **docker-launcher** tool is the simplest way to install and run ProtProtocol images. It is a lightweight Java application that provides a simple user interface to download and run ProtProtocols. It supports Windows, Mac OS X and Linux. Its only requirements are Java and Docker to be installed."
     url: "https://github.com/ProtProtocols/docker-launcher"
-    btn_label: "Visit Project"
+    btn_label: "<i class='fab fa-github'></i> Visit Project"
     btn_class: "btn--primary"
 iso_protocol:
   - image_path: /assets/images/iso_protocol.svg
@@ -26,7 +26,7 @@ iso_protocol:
     title: "IsoLabeledProtocol"
     excerpt: "A ProtProtocol to analyse isobarically labelled (iTRAQ / TMT) quantitative proteomics experiments. The **IsoLabeledProtocol** provides sophisticated statistical methods to analyse complex experimental designs at the click of a button. Like all ProtProtocols the protocol is run as a [Jupyter](https://jupyter.org) notebook. Starting with peak list files as input (mgf format) it performs everything from the search of the spectra until the statistical analysis of the quantified proteins."
     url: "https://github.com/ProtProtocols/IsoLabeledProtocol"
-    btn_label: "Visit Project"
+    btn_label: "<i class='fab fa-github'></i> Visit Project"
     btn_class: "btn--primary"
 eubic:
   - image_path: /assets/images/eubic_logo.png
