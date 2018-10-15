@@ -23,9 +23,9 @@ docker_launcher:
 iso_protocol:
   - image_path: /assets/images/iso_protocol.svg
     alt: "ProtProtocol icon"
-    title: "IsoLabeledProtocol"
-    excerpt: "A ProtProtocol to analyse isobarically labelled (iTRAQ / TMT) quantitative proteomics experiments. The **IsoLabeledProtocol** provides sophisticated statistical methods to analyse complex experimental designs at the click of a button. Like all ProtProtocols the protocol is run as a [Jupyter](https://jupyter.org) notebook. Starting with peak list files as input (mgf format) it performs everything from the search of the spectra until the statistical analysis of the quantified proteins."
-    url: "https://github.com/ProtProtocols/IsoLabeledProtocol"
+    title: "IsoProt"
+    excerpt: "A ProtProtocol to analyse isobarically labelled (iTRAQ / TMT) quantitative proteomics experiments. The **IsoProt** provides sophisticated statistical methods to analyse complex experimental designs at the click of a button. Like all ProtProtocols the protocol is run as a [Jupyter](https://jupyter.org) notebook. Starting with peak list files as input (mgf format) it performs everything from the search of the spectra until the statistical analysis of the quantified proteins."
+    url: "https://github.com/ProtProtocols/IsoProt"
     btn_label: "<i class='fab fa-github'></i> Visit Project"
     btn_class: "btn--primary"
 eubic:
@@ -39,6 +39,13 @@ funding:
   - image_path: /assets/images/eu_logo.png
     title: "Acknowledgments"
     excerpt: "This project has received funding from the European Research Council (ERC) under the European Union's Horizon 2020 research and innovation programme under grant agreement No 788042."
+template_image:
+  - image_path: /assets/images/template_protocol.svg
+    title: "Template Image"
+    excerpt: "The **ProtProtocols template** provides a basic docker image to start the development of a new ProtProtocol. It contains a system with Jupyter including an R kernel installed. To start a new ProtProtocol, simply *clone* the image and adapt it to your needs."
+    url: https://github.com/ProtProtocols/protprotocols_template
+    btn_label: "<i class='fab fa-github'></i> Visit Project"
+    btn_class: "btn--primary"
 ---
 
 {% include feature_row id="intro" type="center" %}
@@ -46,3 +53,5 @@ funding:
 {% include feature_row id="docker_launcher" type="left" %}
 
 {% include feature_row id="iso_protocol" type="right" %}
+
+{% include feature_row id="template_image" type="left" %}
