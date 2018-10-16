@@ -1,7 +1,6 @@
 ---
 permalink: /about/
 title: About ProtProtocols
-layout: single
 ---
 
 ![EuBIC Logo](/assets/images/eubic_logo.png)

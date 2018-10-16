@@ -26,8 +26,8 @@ github_username: ProtProtocols
 
 # Build settings
 markdown: kramdown
-#theme: minimal-mistakes-jekyll
-remote_theme: mmistakes/minimal-mistakes
+theme: minimal-mistakes-jekyll
+#remote_theme: mmistakes/minimal-mistakes
 plugins:
   - jekyll-feed
   - jekyll-include-cache
@@ -46,3 +46,32 @@ exclude:
    - vendor/gems/
    - vendor/ruby/
    - README.md
+
+# Default layouts, etc.
+defaults:
+    -
+        scope:
+            path: ""
+            type: "pages"
+        values:
+            layout: "single"
+    -
+        scope:
+            path: "_pages/documentation_pages"
+            type: "pages"
+        values:
+            toc: true
+            toc_label: "On this page"
+            header:
+                overlay_image: /assets/images/alfons-morales-410757-unsplash.jpg
+                overlay_filter: 0.5
+                caption: "Photo by [Alfons Morales](https://unsplash.com/photos/YLSwjSy7stw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/book?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)"
+                actions:
+                    - label: "<i class='fas fa-question-circle'></i> Get help"
+                      url: "http://qa.proteomics-academy.org"
+            excerpt: "For additional help, simply post on the EuBIC bioinformatics mailing list."
+            sidebar:
+                nav: doc_toc
+
+
+

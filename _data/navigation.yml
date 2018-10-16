@@ -1,3 +1,22 @@
 main:
+    - title: "Documentation"
+      url: documentation
     - title: "About"
       url: about
+
+doc_toc:
+    - title: Documentation
+      url: /documentation/
+      children:
+          - title: Setting up Docker
+            url: /documentation/install_docker
+          - title: Using docker-launcher
+            url: /documentation/docker_launcher
+            description: "Using docker-launcher to download and launch ProtProtocols."
+          - title: Manually running IsoProt
+            url: /documentation/isoprot_manual
+
+#    - title: Developer Docs
+#      children:
+#          - title: Still missing
+#            url: /documentation/isoprot/first_steps
