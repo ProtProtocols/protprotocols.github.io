@@ -5,7 +5,7 @@ title: Manually run IsoProt
 
 IsoProt is a fully reproducible one-stop-shop for the analysis of iTRAQ/TMT data. 
 
-<i class="far fa-file-alt"></i> Read IsoProt manuscript on [bioRxiv](https://doi.org/10.1101/446070)
+<i class="far fa-file-alt"></i> Read the IsoProt manuscript on [bioRxiv](https://doi.org/10.1101/446070)
 
 ## Installation
 
