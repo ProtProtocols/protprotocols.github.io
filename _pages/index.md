@@ -8,6 +8,8 @@ header:
   actions:
     - label: "<i class='fa fa-download'></i> Get docker-launcher"
       url: "https://github.com/ProtProtocols/docker-launcher"
+    - label: "<i class='far fa-file-alt'></i> Read the paper"
+      url: "https://doi.org/10.1101/446070"
   caption: "Photo by [Markus Spiske](https://unsplash.com/photos/466ENaLuhLY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/science?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)"
 excerpt: "Easy-to-use, reproducible bioinformatics workflows for MS/MS based proteomics approaches."
 intro: 
