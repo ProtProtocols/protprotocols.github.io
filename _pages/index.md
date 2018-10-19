@@ -18,7 +18,7 @@ docker_launcher:
   - image_path: assets/images/dockerlauncher.svg
     alt: "docker-launcher"
     title: "docker-launcher"
-    excerpt: "The **docker-launcher** tool is the simplest way to install and run ProtProtocol images. It is a lightweight Java application that provides a simple user interface to download and run ProtProtocols. It supports Windows, Mac OS X and Linux. Its only requirements are Java and Docker to be installed."
+    excerpt: "The **docker-launcher** tool is the simplest way to install and run ProtProtocol images. It is a lightweight Java application that provides a simple user interface to download and run ProtProtocols. It supports Windows, Mac OS X and Linux. Its only requirements are Java and Docker to be installed. For more information see our [documentation pages](/documentation/docker_launcher)."
     url: "https://github.com/ProtProtocols/docker-launcher"
     btn_label: "<i class='fab fa-github'></i> Visit Project"
     btn_class: "btn--primary"
@@ -26,7 +26,7 @@ iso_protocol:
   - image_path: /assets/images/iso_protocol.svg
     alt: "ProtProtocol icon"
     title: "IsoProt"
-    excerpt: "A ProtProtocol to analyse isobarically labelled (iTRAQ / TMT) quantitative proteomics experiments. The **IsoProt** provides sophisticated statistical methods to analyse complex experimental designs at the click of a button. Like all ProtProtocols the protocol is run as a [Jupyter](https://jupyter.org) notebook. Starting with peak list files as input (mgf format) it performs everything from the search of the spectra until the statistical analysis of the quantified proteins."
+    excerpt: "A ProtProtocol to analyse isobarically labelled (iTRAQ / TMT) quantitative proteomics experiments. The **IsoProt** provides sophisticated statistical methods to analyse complex experimental designs at the click of a button. Like all ProtProtocols the protocol is run as a [Jupyter](https://jupyter.org) notebook. Starting with peak list files as input (mgf format) it performs everything from the search of the spectra until the statistical analysis of the quantified proteins. The easiest way to use IsoProt is through our [docker-launcher](/documentation/docker_launcher) application."
     url: "https://github.com/ProtProtocols/IsoProt"
     btn_label: "<i class='fab fa-github'></i> Visit Project"
     btn_class: "btn--primary"
