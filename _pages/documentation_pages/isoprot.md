@@ -24,16 +24,16 @@ Download the image:
 
 ```bash
 # Download version 0.1 of the image
-docker pull veitveit/isoprot:release-0.1
+docker pull protprotocols/isoprot:release-0.1
 
 # Download the latest version of the image
-docker pull veitveit/isoprot:latest
+docker pull protprotocols/isoprot:latest
 ```
 
 ## Manually run the image
 
 ```bash
-docker run -it -p 8888:8888 veitveit/isoprot:release-0.1
+docker run -it -p 8888:8888 protprotocols/isoprot:release-0.1
 ```
 
 **Note:** Replace the `release-0.1` portion with the version of the image you downloaded and want to launch.
@@ -44,7 +44,7 @@ This will launch the image and make it available to access on [http://localhost:
 In order to directly access your computer's folders through the docker image (recommended option) map local directories to the containers /data (for input data) and OUT (for output data) folders:
 
 ```bash
-docker run -it -p 8888:8888 -v /path/to/my/mgf/files:/data/ -v /path/to/my/result/folder:/home/biodocker/OUT veitveit/isoprot
+docker run -it -p 8888:8888 -v /path/to/my/mgf/files:/data/ -v /path/to/my/result/folder:/home/biodocker/OUT protprotocols/isoprot
 ```
 
 **Note:** When running Docker Toolbox (ie. only available version on Windows 7), local paths must be below C:\Users. Additionally, paths need to specified in the following format:
@@ -52,7 +52,7 @@ docker run -it -p 8888:8888 -v /path/to/my/mgf/files:/data/ -v /path/to/my/resul
 
 ```bash
 # to map C:\Users\Johannes\Downloads
-docker run -it -p 8888:8888 -v /c/users/johannes/downloads:/data/ -v /c/users/johannes/results:/home/biodocker/OUT veitveit/isoprot
+docker run -it -p 8888:8888 -v /c/users/johannes/downloads:/data/ -v /c/users/johannes/results:/home/biodocker/OUT protprotocols/isoprot
 ```
 
 ## Access the Notebook
