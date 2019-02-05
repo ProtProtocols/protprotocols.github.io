@@ -17,7 +17,13 @@ doc_toc:
     - title: IsoProt
       description: "Protocol to analyse isobarically labelled MS/MS data."
       children:
-        - title: Save and restore settings
+        - title: Save and Restore Settings
           url: /documentation/isoprot/save_analysis
-        - title: Run IsoProt without docker-launcher
+        - title: Run IsoProt Without docker-launcher
           url: /documentation/isoprot_manual
+    - title: Development
+      children:
+        - title: Creating Custom Notebooks
+          url: /documentation/development/custom_notebooks
+        - title: Creating New Protocols
+          url: /documentation/development/docker_protocols
