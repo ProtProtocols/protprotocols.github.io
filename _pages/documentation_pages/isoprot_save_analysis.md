@@ -34,11 +34,11 @@ To **reuse settings** simply copy the `protocol_parameters.json` and `exp_design
 
 ## Save complete workflow
 
-The `protocol_parameters.json` and  the `exp_desin.tsv` file do not include any R code added or changed in the Jupyter notebook itself. Luckily, the notebook can be easily saved: 
+The `protocol_parameters.json` and  the `exp_desin.tsv` file do not include changes made to the notebook itself, like modifying R code etc. Luckily, the notebook itself can  be easily saved by choosing **File/Download as/Notebook (.ipynb)**:
 
 ![Save notebook dialog](/assets/images/isoprot_save_notebook.png)
 
-To save the notebook in an easily transferrable fashion such that users don't have to install new software to open it, select the **HTML (.html)** option. If you want to use the modified notebook for future analyses, use the **Notebook (.ipynb)** option. This downloads the most complete representation of the notebook.
+It is also possible to save just the graphical presentation of a notebook by choosing **File/Download as/HTML (.html)** option. This makes it easy to view and share analyses results and setup without the need to have Jupyter installed.
 
 **Warning:** Do not use the `PDF vi LaTeX (.pdf)` option. Unfortunately, this option does not work correctly and does not contain the complete text and code found in the notebook. This is not caused by us but by how Jupyter notebooks use LaTeX to create PDF files. We hope that this will be fixed in a future version of Jupyter notebook.
 {: .notice--warning}

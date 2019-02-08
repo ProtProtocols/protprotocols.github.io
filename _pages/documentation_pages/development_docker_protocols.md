@@ -63,7 +63,7 @@ RUN Rscript /tmp/install_packages.R && rm /tmp/install_packages.R
 
 In the code above, we copy our `install_packages.R` script into the image to then use it through the `Rscript` command to install all required R packages.
 
-As you saw, the commands in a `Dockerfile` are basic Linux commands executed in the containers shell. We use a bit more comples commands to install tools like SearchGUI and PeptideShaker:
+As you saw, the commands in a `Dockerfile` are basic Linux commands executed in the containers shell. We use a bit more complex commands to install tools like SearchGUI and PeptideShaker:
 
 ```Dockerfile
 RUN mkdir /home/biodocker/bin
@@ -76,7 +76,7 @@ RUN PVersion=1.16.27 && ZIP=PeptideShaker-${PVersion}.zip && \
 
 ## Adding additional software
 
-To add additional software, simply add the required `RUN` commands to install them to the `Dockerfile`.
+To add additional software, simply add the required `RUN` commands to the `Dockerfile`.
 
 If the software you need is **available in the repository**, the easiest is to adapt the first `RUN` command used to install `mono` and related libraries. Simply add the packages you need to this command.
 
@@ -134,7 +134,10 @@ To have root access in the session:
 sudo docker run -ti -p 8888:8888 -u root yourname/my_container bash
 ```
 
-### Connect to a running container:
+### Connect to a running container
+
+Run `sudo docker container ls`  to find the appropriate container_id.
+Then, run `sudo docker exec -ti -u root <container_id> bash`:
 
 ```bash
 # Get the running container id
@@ -145,5 +148,3 @@ c4f023536c56        protprotocols/isoprot:release-0.2   "/bin/sh -c 'jupyter…"
 # Open a session in this container
 sudo docker exec -ti -u root c4f023536c56 bash
 ```
-
-In your case, you have to replace the container id **c4f023536c56** with the id returned by your `sudo docker container ls` command.

@@ -25,17 +25,18 @@ Isobaric_Workflow.ipynb
 : The Jupyter notebook that represents the `IsoProt` protocol.
 
 Scripts/search.ipy
-: All scripts related to the actual search process. This includes adapting MGF file titles, creating the decoy database, using SearchGUI to perform the search, and use PeptideShaker to create the result files.
+: Script file containing all the steps of the search process. Each step is one Python function. This includes adapting MGF file titles, creating the decoy database, performing search using *SearchGUI* and using PeptideShaker to create the result files.
 
 Scripts/search_ui.ipy
-: The scripts required to display the graphical user interface components to enter the search parameters and experimental setup.
+: The scripts used to generate GUI components for search parameters and experimental setup.
 
 **Note:** We additionally created a new Jupyter widget that displays a button to execute subsequent cells in the notebook. The repository for this project can be found [here](https://github.com/ProtProtocols/jupyter-button_execute).
 {: .notice--info}
 
 ## Seeing How IsoProt Works
 
-We hide all python and R code from the user by simply hiding the respective cells in the Jupyter notebook. To see how the notebook actually works, unhide the code by clicking the `Toggle everything` button:
+
+By default, all the Python and R code is hidden. To see how the notebook actually works, unhide the code by clicking the `Toggle everything` button:
 
 ![Jupyter toggle button](/assets/images/jupyter_toggle_button.png)
 
@@ -45,18 +46,25 @@ This should give you a first idea of how to customize the notebook to your needs
 
 The easiest way to develop new notebooks is directly within the Docker container. Thereby, all external tools are already in place and you know that your scripts are fully compatible with the ProtProtocols container.
 
-To do this, simply launch `IsoProt` as you normally do, using [docker-launcher](/documentation/docker_launcher) or [directly](/documentation/isoprot_manual). Then, simply create a new Python Notebook using Jupyter notebook's home screen:
+To do this, simply launch `IsoProt` as you normally do, using [docker-launcher](/documentation/docker_launcher) or [manually](/documentation/isoprot_manual).
+We recommend to start by duplicating the `Isobaric_Workflow.ipynb` and modifying it or starting from scratch with an empty notebook. To duplicate a notebook, select the checkbox left of the notebooks name and click "Duplicate":
 
-![Create new Jupyter notebook](/assets/images/jupyter_new_notebook.png)
+> ![Duplicate existing Jupyter notebook](/assets/images/jupyter_duplicate_notebook.png)
 
-Alternatively, open the `Isobaric_Workflow.ipynb` as a starting point and use "File" > "Make a Copy" to create your own new version.
 
-**Warning:** If you save your notebook, this is only saved in the Docker container and is lost once you close the container. Save your notebook on your harddisk using "File" > "Download as" > "Notebook (.ipynb)"!
+**Warning:** If you save your notebook, this is only saved in the Docker container and is lost once you close the container. Save your notebook on your hard-disk using "File" > "Download as" > "Notebook (.ipynb)"!
 {: .notice--warning} 
+
+Advanced users are encouraged to map additional local folders when running docker image. Such locations are ideal for custom Notebooks and Script files.
+See [Manually run IsoProt](/documentation/isoprot_manual)  for more information on mapping folders when running docker images.
+
 
 ## Using ProtProtocols Jupyter scripts
 
-Our Jupyter python scripts each contain a header with detailed documentation about how to use them (copied from `search.ipy`):
+A **Script** in ProtProtocols terminology is an **.ipy** file which is intended to be run from Jupyter notebook (using **%run <path_to_script_file>** magic) and
+is expected to read from and write to a predefined global variable objects (objects in Python global namespace).
+
+Our Jupyter Python scripts each contain a header with detailed documentation about how to use them (copied from `search.ipy`):
 
 ```python
 """
@@ -108,7 +116,7 @@ The result and MGF files are loaded into R below the `Load and Quantify Spectra 
 **Note:** Most of our R code is called using the `ro.reval` function. Generally, it is more comfortable to mark a complete cell to contain R using the `%%R` magic command. We did not use this approach since the current implementation does not allow us to display status messages while the R code is running. This caused many users to think that the application had stopped for longer analyses.
 {: .notice--info}
 
-At the end of this cells, the `PSMDat` list in the R namespace contains the complete quantitative results of the experiments at the PSM level. The list contains one `MSnSet` object per TMT/iTRAQ run. If the run was processed in multiple fractions, these are already combined into a single object.
+Neer the end of these cells, the `PSMDat` list stored in the R namespace contains the complete quantitative results of the experiments at the PSM level. The list contains one `MSnSet` object per TMT/iTRAQ run. If the run was processed in multiple fractions, these are already combined into a single object.
 
 ## Adapting the R code - Protein level
 
