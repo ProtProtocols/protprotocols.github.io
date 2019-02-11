@@ -116,7 +116,7 @@ The result and MGF files are loaded into R below the `Load and Quantify Spectra 
 **Note:** Most of our R code is called using the `ro.reval` function. Generally, it is more comfortable to mark a complete cell to contain R using the `%%R` magic command. We did not use this approach since the current implementation does not allow us to display status messages while the R code is running. This caused many users to think that the application had stopped for longer analyses.
 {: .notice--info}
 
-Neer the end of these cells, the `PSMDat` list stored in the R namespace contains the complete quantitative results of the experiments at the PSM level. The list contains one `MSnSet` object per TMT/iTRAQ run. If the run was processed in multiple fractions, these are already combined into a single object.
+Near the end of these cells, the `PSMDat` list stored in the R namespace contains the complete quantitative results of the experiments at the PSM level. The list contains one `MSnSet` object per TMT/iTRAQ run. If the run was processed in multiple fractions, these are already combined into a single object.
 
 ## Adapting the R code - Protein level
 
