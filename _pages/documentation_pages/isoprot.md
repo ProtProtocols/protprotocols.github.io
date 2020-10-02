@@ -5,7 +5,7 @@ title: Manually run IsoProt
 
 IsoProt is a fully reproducible one-stop-shop for the analysis of iTRAQ/TMT data. 
 
-<i class="far fa-file-alt"></i> Read the IsoProt manuscript on [bioRxiv](https://doi.org/10.1101/446070)
+<i class="far fa-file-alt"></i> Read the IsoProt manuscript at [JPR](https://pubs.acs.org/doi/10.1021/acs.jproteome.8b00968) (open access)
 
 ## Installation
 
@@ -23,8 +23,8 @@ IsoProt is a [Docker](https://www.docker.com) image and can also manually be ins
 Download the image:
 
 ```bash
-# Download version 0.1 of the image
-docker pull protprotocols/isoprot:release-0.1
+# Download version 0.2 of the image
+docker pull protprotocols/isoprot:release-0.2
 
 # Download the latest version of the image
 docker pull protprotocols/isoprot:latest
@@ -33,10 +33,10 @@ docker pull protprotocols/isoprot:latest
 ## Manually run the image
 
 ```bash
-docker run -it -p 8888:8888 protprotocols/isoprot:release-0.1
+docker run -it -p 8888:8888 protprotocols/isoprot:release-0.2
 ```
 
-**Note:** Replace the `release-0.1` portion with the version of the image you downloaded and want to launch.
+**Note:** Replace the `release-0.2` portion with the version of the image you downloaded and want to launch.
 {: .notice--info}
 
 This will launch the image and make it available to access on [http://localhost:8888](http://localhost:8888).
